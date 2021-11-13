@@ -40,6 +40,7 @@ DJANGO_APPS = [
 ]
 
 THIRD_PARTY_APPS = [
+    'rest_framework',
 ]
 
 LOCAL_APPS = [
@@ -76,6 +77,24 @@ TEMPLATES = [
         },
     },
 ]
+
+# rest framework settings
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.DjangoModelPermissions',
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'manatal.pagination.CustomPagination',
+    'PAGE_SIZE': 10,
+    'DEFAULT_RENDERER_CLASSES': (
+        'manatal.renderer.DefaultRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
+    ),
+    'DEFAULT_FILTER_BACKENDS': (
+        'django_filters.rest_framework.DjangoFilterBackend',
+        'rest_framework.filters.SearchFilter',
+        'rest_framework.filters.OrderingFilter',
+    )
+}
 
 WSGI_APPLICATION = 'manatal.wsgi.application'
 
