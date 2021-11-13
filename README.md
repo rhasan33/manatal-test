@@ -38,6 +38,7 @@
     - write test cases for the views, models, and serializers
     - add ordering and search filters
     - add a few extra model fields
+    - write a management command to populate data using Faker
     
 - How to run:
 
