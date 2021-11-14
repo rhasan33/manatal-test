@@ -68,9 +68,14 @@
     - to do the migration first need to exec in the docker container by `docker-compose exec app bash`
     - then need to change directory to src folder in the docker container by `cd src` and then run `python manage.py migrate`
     - the project is running on `http://localhost:8080`
+    - run `python manage.py seeder` to populate data using faker
     - to run the test cases you need to run from docker shell: `python manage.py test` from the `src` directory
     
-## API Doc
+## API Documentation
+- Please click [here](https://hackmd.io/@LagP9HgFSnK0trS0YWJFMg/Sks0f4CvK) for API Documentation
 
-
+## Heroku Link:
+- `https://manatal-test.herokuapp.com/`
+    - sample:
+        - `https://manatal-test.herokuapp.com/api/v1/students/`
 

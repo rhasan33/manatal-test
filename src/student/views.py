@@ -73,6 +73,12 @@ class StudentNestedViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         return Student.objects.select_related('school').filter(school=self.kwargs['school_pk'])
 
+    def get_object(self):
+        try:
+            return Student.objects.select_related('school').get(school=self.kwargs['school_pk'], pk=self.kwargs['pk'])
+        except Student.DoesNotExist:
+            raise ValidationError(detail='student not found', code=status.HTTP_404_NOT_FOUND)
+
     def create(self, request, *args, **kwargs):
         request.data['identifier'] = str(uuid4().hex)[:20]
         with transaction.atomic():
