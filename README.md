@@ -80,4 +80,6 @@
         - `https://manatal-test.herokuapp.com/api/v1/students/`
         - `https://manatal-test.herokuapp.com/api/v1/schools/`
         - `https://manatal-test.herokuapp.com` (health check api)
+    
+#### NB: there are three branches in the project. `setp-1`, `step-2` and `step-3`. The complete task is in the `step-3` branch. Also this branch is deployed in heroku.
 
