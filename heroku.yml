@@ -21,4 +21,4 @@ run:
   web: 
     image: web
     command:
-      - cd src && ./manage.py runserver 0.0.0.0:8000
+      - cd src && ./manage.py runserver 0.0.0.0:$PORT

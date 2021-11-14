@@ -1,6 +1,7 @@
 FROM python:3.8-slim
 
 ENV PYTHONUNBUFFERED 1
+ENV PORT 8000
 
 WORKDIR /app
 
@@ -21,4 +22,4 @@ RUN cd /tmp && pipenv lock -d --requirements > requirements.txt \
 
 COPY src/ /app/src/
 
-EXPOSE 8000
+EXPOSE $PORT
