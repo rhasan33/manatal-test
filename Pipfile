@@ -10,6 +10,7 @@ djangorestframework = "*"
 faker = "*"
 django-filter = "*"
 drf-nested-routers = "*"
+whitenoise = "*"
 
 [dev-packages]
 
