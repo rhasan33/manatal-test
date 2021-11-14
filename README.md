@@ -70,5 +70,7 @@
     - the project is running on `http://localhost:8080`
     - to run the test cases you need to run from docker shell: `python manage.py test` from the `src` directory
     
+## API Doc
+
 
 
