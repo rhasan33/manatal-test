@@ -69,4 +69,6 @@
     - then need to change directory to src folder in the docker container by `cd src` and then run `python manage.py migrate`
     - the project is running on `http://localhost:8080`
     - to run the test cases you need to run from docker shell: `python manage.py test` from the `src` directory
+    
+
 

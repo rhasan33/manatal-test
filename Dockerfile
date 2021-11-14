@@ -23,4 +23,6 @@ RUN cd /tmp && pipenv lock -d --requirements > requirements.txt \
 COPY src/ /app/src/
 RUN mkdir /app/src/static
 
+RUN cd src/ && python manage.py collectstatic --no-input
+
 EXPOSE $PORT
