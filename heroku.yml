@@ -5,6 +5,10 @@ setup:
 build:
   docker:
     web: Dockerfile
+release:
+  image: web
+  command:
+    - cd src && ./manage.py migrate && ./manage.py collectstatic
   config:
     DB_HOST: ec2-34-247-151-118.eu-west-1.compute.amazonaws.com
     DB_NAME: dnuf8kl0r1348
@@ -13,10 +17,6 @@ build:
     DB_PORT: "5432"
     SECRET_KEY: lb5u2@-7c68-^ssprij!c^d$175cbsisx2&ya*h#%-+4alz^ph3
     DJANGO_LOG_LEVEL: INFO
-release:
-  image: web
-  command:
-    - cd src && ./manage.py migrate && ./manage.py collectstatic
 run:
   web: 
     image: web
