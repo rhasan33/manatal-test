@@ -11,9 +11,9 @@ RUN apt-get update && apt-get install build-essential curl -y && \
 
 RUN pip3 install pipenv
 
-ADD Pipfile* /tmp
+ADD Pipfile* /tmp/
 
-ADD wait-for-it.sh /app
+ADD wait-for-it.sh /app/
 RUN chmod +x wait-for-it.sh
 
 RUN cd /tmp && pipenv lock -d --requirements > requirements.txt \
