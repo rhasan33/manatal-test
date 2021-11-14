@@ -78,4 +78,6 @@
 - `https://manatal-test.herokuapp.com/`
     - sample:
         - `https://manatal-test.herokuapp.com/api/v1/students/`
+        - `https://manatal-test.herokuapp.com/api/v1/schools/`
+        - `https://manatal-test.herokuapp.com` (health check api)
 
