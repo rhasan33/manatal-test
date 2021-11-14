@@ -21,5 +21,6 @@ RUN cd /tmp && pipenv lock -d --requirements > requirements.txt \
     && pip install -r /tmp/requirements.txt
 
 COPY src/ /app/src/
+RUN mkdir /app/src/static
 
 EXPOSE $PORT
