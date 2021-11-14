@@ -1,0 +1,24 @@
+setup:
+  addons:
+    - plan: heroku-postgresql
+      as: DATABASE
+  build:
+    docker:
+      web: Dockerfile
+    config:
+      DB_HOST: ec2-34-247-151-118.eu-west-1.compute.amazonaws.com
+      DB_NAME: dnuf8kl0r1348
+      DB_USER: qgdwqyazfjfnrz
+      DB_PASSWORD: d8f339aa49a1be9eea73ce25e08e0b121644d9b093b75b192de2c83400c30bb2
+      DB_PORT: "5432"
+      SECRET_KEY: lb5u2@-7c68-^ssprij!c^d$175cbsisx2&ya*h#%-+4alz^ph3
+      DJANGO_LOG_LEVEL: INFO
+  release:
+    image: web
+    command:
+      - cd src && ./manage.py migrate && ./manage.py collectstatic
+  run:
+    web: 
+      image: web
+      command:
+        - cd src && ./manage.py runserver 0.0.0.0:8000
