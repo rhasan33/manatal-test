@@ -24,7 +24,7 @@
     - the project is running on `http://localhost:8080`
     
 
-## Step 2:
+## Step 2
 
 - time tracker:
 
@@ -47,3 +47,26 @@
     - then need to change directory to src folder in the docker container by `cd src` and then run `python manage.py migrate`
     - the project is running on `http://localhost:8080`
     - to run the test cases you need to run from docker shell: `python manage.py test` from the `src` directory
+    
+## Step 3
+
+- time tracker:
+
+    - start time: 9:45 AM (14.11.2021)
+    - end time: 11:14 AM (14.11.2021)
+    
+- Task Covered:
+
+    - install and setup `drf-nested-routers`
+    - api for all the CRUD and school seat availability logics with `drf-nested-routers`
+    - write test cases for nested routes
+    
+- How to run:
+
+    - need to install docker and docker compose
+    - start the server by `docker-compose up --build`
+    - to do the migration first need to exec in the docker container by `docker-compose exec app bash`
+    - then need to change directory to src folder in the docker container by `cd src` and then run `python manage.py migrate`
+    - the project is running on `http://localhost:8080`
+    - to run the test cases you need to run from docker shell: `python manage.py test` from the `src` directory
+

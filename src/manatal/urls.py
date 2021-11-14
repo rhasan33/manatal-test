@@ -14,6 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path, include
+from manatal.views import health_check
 
 v1_patterns = [
     path(r'', include('school.urls', namespace='school')),
@@ -21,6 +22,7 @@ v1_patterns = [
 ]
 
 urlpatterns = [
+    path('', health_check),
     path(r'api/', include([
         path(r'v1/', include(v1_patterns)),
     ]))
