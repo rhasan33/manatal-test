@@ -16,7 +16,7 @@ build:
 release:
   image: web
   command:
-    - cd src && ./manage.py migrate && ./manage.py collectstatic
+    - cd src && ./manage.py migrate && ./manage.py collectstatic --no-input
 run:
   web: 
     image: web
