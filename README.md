@@ -22,3 +22,5 @@
     - to do the migration first need to exec in the docker container by `docker-compose exec app bash`
     - then need to change directory to src folder in the docker container by `cd src` and then run `python manage.py migrate`
     - the project is running on `http://localhost:8080`
+
+#### NB: there are three branches in the project. `setp-1`, `step-2` and `step-3`. The complete task is in the `step-3` branch. Also this branch is deployed in heroku.
